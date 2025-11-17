@@ -1,4 +1,4 @@
-# Project (Nov 17 2025 Update)
+# Project (Nov 17 2025 new update)
 
 > This repo has been populated by an initial template to help get you started. Please
 > make sure to update the content to build a great experience for community-building.
