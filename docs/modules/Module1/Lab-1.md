@@ -115,14 +115,9 @@ chmod +x ./tools/deploy/module0/aad-federated-cred.sh
 ### Deploying the Azure Function App code
 
 * Deploy the Azure Function App code using Github Actions workflow file [module2-code-workflow.yaml](../../../.github/workflows/module1-code-workflow.yaml) as follows:
-  1. In Azure portal, navigate to the Function App that was deployed in the last step.
-  2. Click **Get publish profile** and download **.PublishSettings** file.
-  3. Open the **.PublishSettings** file and copy the XML content.
-  4. Paste the XML content to your GitHub Repository > Settings > Secrets > Add a new secret > **AZURE_FUNCTIONAPP_PUBLISH_PROFILE**
-  5. Trigger this workflow manually:
-    * click on the `Actions` tab.
-    * Select `Deploy Azure Function App` workflow.
-    * Click on the `Run workflow` button
+  1. Click on the `Actions` tab.
+  2. Select `Deploy Azure Function App` workflow.
+  3. Click on the `Run workflow` button
 
 * Configure following **Application Settings** for the Azure Function by going to your `function app > Configuration > Application Settings`:
   1. OPENAI_API_BASE - Azure OpenAI API Endpoint URL (e.g. https://openai-demo-ahmedbham.openai.azure.com/)
@@ -145,7 +140,7 @@ chmod +x ./tools/deploy/module0/aad-federated-cred.sh
 
 ## Testing Transaction Classification App
 
-* Open the sample transaction file [25000_spend_dataset_current_25.csv](../../../tools/deploy/Module1/data/25000_spend_dataset_current_25.csv) and notice that the **classification** column is empty. This is the column that will be populated by the Azure Function by calling Azure OpenAI API.   	
+* Open the sample transaction file [25000_spend_dataset_current_25.csv](../../../tools/deploy/module1/data/25000_spend_dataset_current_25.csv) and notice that the **classification** column is empty. This is the column that will be populated by the Azure Function by calling Azure OpenAI API.   	
 * Upload this file to the **classification** blob container: `portal > storage account > containers > classification > upload`
 * After few seconds, download the updated file from the **output** blob container `portal > storage account > containers > output > download`
 * Open the file and notice the **classification** column is populated with the predicted category for each transaction.
