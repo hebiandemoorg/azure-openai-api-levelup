@@ -1,3 +1,4 @@
+Update Readme
 # Azure OpenAI API Hands-on LevelUp Labs
 
 Welcome to the **Azure OpenAI API Hands-on LevelUp Labs** repository! This repository contains three hands-on labs that will help you build intelligent applications using Azure OpenAI API.
